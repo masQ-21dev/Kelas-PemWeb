@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js DOM</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+
+        #main-container {
+            padding-top: 50px;
+        }
+
+        .container {
+            width: 100%;
+        }
+
+        h1,
+        h2,
+        #elemen-baru {
+            text-align: center;
+        }
+
+        .gambar {
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .btn-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        button {
+            padding: 20px 40px;
+            border-radius: 20px;
+            border: none;
+            background: linear-gradient(to right, #dbd65c, #5614b0);
+            color: white;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        img {
+            border-radius: 20px;
+        }
+
+        #container-1,
+        #container-2,
+        #container-3 {
+            border-radius: 20px;
+            background: linear-gradient(to right, #c02425, #f0cb35);
+            margin: 0px 200px;
+            padding: 50px;
+            box-shadow: 0px 14px 50px 1px black;
+        }
+
+        #container-2,
+        #container-3 {
+            margin-top: 50px;
+        }
+
+        #elemen-baru {
+            font-size: 2rem;
+            font-weight: bold;
+        }
+
+        .black-thame {
+            /* color: white; */
+            background: #2e3537;
+            height: 100vh;
+        }
+
+        .black-container {
+            background: linear-gradient(to right, #A6ADBF, #677787) !important;
+            box-shadow: 0px 14px 50px 1px rgb(141, 141, 141) !important;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="main-container">
+        <div id="container-1">
+            <h1>manipulasi elemen-baru</h1>
+            <h2 id="Text-baru"></h2>
+
+            <div class="gambar">
+
+
+            </div>
+
+            <div class="btn-container">
+                <button onclick="tombol1()">manipulasi elemen</button>
+            </div>
+        </div>
+
+        <div id="container-2">
+            <h1>Tambah Elemen baru</h1>
+            <div id="elemen-baru">
+
+            </div>
+
+            <div class="btn-container">
+                <button onclick="tombol2()">manipulasi elemen</button>
+            </div>
+        </div>
+
+        <div id="container-3">
+            <h1>onClick tombol</h1>
+            <div class="btn-container">
+                <button onclick="tombol3()">ubah sekema warna</button>
+            </div>
+        </div>
+
+
+
+    </section>
+
+
+    <script>
+        //manipulasi Text
+        function tombol1() {
+            document.getElementById('Text-baru').innerHTML = "ini adalh text baru";
+        }
+
+        //manipulasi element
+        function tombol2() {
+            const tag = document.createElement('p');
+            const textNode = document.createTextNode("ini adalah text dari manipulasi element");
+
+            document.getElementById('elemen-baru').appendChild(tag.appendChild(textNode));
+        }
+
+        function tombol3() {
+            const main = document.getElementById('main-container');
+            const container1 = document.getElementById('container-1')
+            const container2 = document.getElementById('container-2')
+            const container3 = document.getElementById('container-3')
+
+            main.classList.toggle("black-thame");
+            container1.classList.toggle("black-container");
+            container2.classList.toggle("black-container");
+            container3.classList.toggle("black-container");
+        }
+
+    </script>
+</body>
+
+
+
+</html>
