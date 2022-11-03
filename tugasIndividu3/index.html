@@ -2,9 +2,6 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>js DOM</title>
     <style>
         body {
@@ -89,12 +86,6 @@
         <div id="container-1">
             <h1>manipulasi elemen-baru</h1>
             <h2 id="Text-baru"></h2>
-
-            <div class="gambar">
-
-
-            </div>
-
             <div class="btn-container">
                 <button onclick="tombol1()">manipulasi elemen</button>
             </div>
@@ -103,9 +94,7 @@
         <div id="container-2">
             <h1>Tambah Elemen baru</h1>
             <div id="elemen-baru">
-
             </div>
-
             <div class="btn-container">
                 <button onclick="tombol2()">manipulasi elemen</button>
             </div>
@@ -117,18 +106,13 @@
                 <button onclick="tombol3()">ubah sekema warna</button>
             </div>
         </div>
-
-
-
     </section>
-
 
     <script>
         //manipulasi Text
         function tombol1() {
             document.getElementById('Text-baru').innerHTML = "ini adalh text baru";
         }
-
         //manipulasi element
         function tombol2() {
             const tag = document.createElement('p');
@@ -136,7 +120,7 @@
 
             document.getElementById('elemen-baru').appendChild(tag.appendChild(textNode));
         }
-
+        //fungtion event handler
         function tombol3() {
             const main = document.getElementById('main-container');
             const container1 = document.getElementById('container-1')
@@ -151,7 +135,4 @@
 
     </script>
 </body>
-
-
-
 </html>
